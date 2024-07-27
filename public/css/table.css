@@ -1,0 +1,22 @@
+.custom-table {
+    background-color: white; /* White background for the table */
+    border-collapse: collapse; /* Ensures borders are collapsed */
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #d1e7fd; /* Light blue border */
+    padding: 10px; /* Padding for table cells */
+}
+
+.custom-table th {
+    background-color: #e7f1ff; /* Light blue background for header */
+    color: #000; /* Text color for header */
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f8f9fa; /* Light gray for even rows */
+}
+
+.custom-table tr:hover {
+    background-color: #d1e7fd; /* Light blue on hover */
+}

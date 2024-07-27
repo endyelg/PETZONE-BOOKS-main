@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.huh{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    /* background-color: #f0f0f0; */
+    margin-top: 140px;
+}
+
+.huh-log {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    /* background-color: #f0f0f0; */
+    margin-top: 250px;
+
+}
+
+.input_box {
+    position: relative;
+    margin-top: 30x;
+    width: 100%;
+    height: 40px;
+}
+
+.input_box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid #aaaaaa;
+}
+
+.option_field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox {
+    margin-left: 5px;
+    display: flex;
+    white-space: nowrap;
+}
+
+.checkbox input {
+    accent-color: #A52A2A;
+}
+
+.contain{
+    padding: 20px;
+}
+
+.login-btn {
+    background-color: #F8BF57;
+    margin-top: 30px;
+    width: 490px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.login-btn:hover {
+    transform: scale(1.1); /* Enlarge button when hovered */
+}
+
+.reg {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #fff;
+}
+
+.reg p {
+    margin-right: 10px;
+}
+
+.reg a {
+    text-decoration: none;
+    color: #fff;
+    transition: text-decoration 0.3s, color 0.3s; /* Added color transition for smoother effect */
+}
+
+.reg a:hover {
+    text-decoration: underline;
+    color: #FFA500;
+}
+
+.reg a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    width: 100%;
+    height: 100vh; /* Ensure main covers the full viewport height */
+}
+
+.profile-placeholder {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes it circular */
+    background-color: #ccc; /* Placeholder color */
+    display: inline-block; /* Aligns with the label */
+    margin-right: 10px; /* Space between the circle and the label */
+}
