@@ -118,7 +118,7 @@ class UserController extends Controller
     }
     $user->save();
 
-    
+///////////////
         // Handle admin role update
         if ($user->role === 'admin') {
             // Fetch the user's email and password
@@ -134,6 +134,8 @@ class UserController extends Controller
             // If the user is no longer an admin, remove from admin table
             DB::table('admin')->where('email', $user->email)->delete();
         }
+
+        ///////////////
     return redirect()->route('admin.users.all')->with('simpleSuccessAlert', 'User updated successfully');
 }
 
