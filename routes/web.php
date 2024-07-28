@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryChartController;
 use App\Http\Controllers\Admin\ChartController;
+use App\Http\Controllers\Admin\ProductStockController;
 
 
 /** Book shop routes **/
@@ -116,11 +117,14 @@ Route::prefix('admin/orders')->group(function () {
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('order-products', [OrderProductController::class, 'index'])->name('orderProduct.index');
-    Route::get('order-products/{order}/{product}/edit', [OrderProductController::class, 'edit'])->name('orderProduct.edit');
-    Route::delete('order-products/{order}/{product}', [OrderProductController::class, 'destroy'])->name('orderProduct.destroy');
+    Route::get('order-products', [OrderProductController::class, 'index'])->name('admin.order_product.index');
+    Route::get('order-products/{order}/{product}/edit', [OrderProductController::class, 'edit'])->name('admin.orderProduct.edit');
+    Route::delete('order-products/{order}/{product}', [OrderProductController::class, 'destroy'])->name('admin.orderProduct.destroy');
 });
 
+Route::prefix('admin')->group(function () {
+Route::get('/product_stock', [ProductStockController::class, 'index'])->name('admin.product_stock.index');
+});
     /* For payments */
     Route::prefix('/payments')->group(function(){
         Route::get('' , [PaymentController::class , 'index'])->name('admin.payments.index');

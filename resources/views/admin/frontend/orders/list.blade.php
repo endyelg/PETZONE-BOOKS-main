@@ -20,7 +20,7 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="orders-table">
                     @foreach($orders as $order)
                         <tr>
                             <td>{{ $order->id }}</td>
@@ -35,9 +35,9 @@
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </a>
                                 <form action="{{ route('admin.orders.destroy', $order->id) }}" method="POST" style="display:inline;">
-                                    @csrf
+                                @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this order?')">
+                                    <button type="submit" class="btn btn-danger">
                                         <i class="fa fa-trash" aria-hidden="true"></i>
                                     </button>
                                 </form>
