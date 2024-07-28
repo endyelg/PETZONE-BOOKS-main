@@ -34,7 +34,15 @@
                                     <li><a href="{{ route('admin.expenses.create') }}">Add</a></li>
                                 </ul>
                             </li>
-                            <li class="for-li"><a href="{{ route('admin.categories.index') }}"><i class="fa fa-shopping-basket"></i> <span>Order Management</span></a></li>
+                            <li class="for-li">
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-shopping-basket"></i><span>Order Management</span></a>
+                                <ul class="collapse">
+                                    <li><a href="{{ route('admin.orders.all') }}">Order</a></li>
+                                    <li><a href="{{ route('admin.expenses.create') }}">Ordered Products</a></li>
+                                </ul>
+                            </li>
+                            <li class="for-li"><a href="{{ route('admin.categories.index') }}"><i class="fa fa-cubes"></i> <span>Stocks Management</span></a></li>
+                            <li class="for-li"><a href="{{ route('admin.categories.index') }}"><i class="fa fa-object-group"></i> <span>Categories</span></a></li>
                             <li class="for-li">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-area-chart"></i><span>Charts</span></a>
                                 <ul class="collapse">
@@ -43,7 +51,6 @@
                                    <li><a href="{{ route('admin.charts.line') }}"><i class="fa fa-line-chart" aria-hidden="true"></i></i> <span>Line Chart</span></a></li>
                                 </ul>
                             </li>
-                            <li class="for-li"><a href="{{ route('admin.categories.index') }}"><i class="fa fa-object-group"></i> <span>Categories</span></a></li>
                     </nav>
                 </div>
             </div>

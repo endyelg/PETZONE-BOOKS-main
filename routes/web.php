@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\OrderProductController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\productController;
 use App\Http\Controllers\Admin\ExpensesController;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryChartController;
 use App\Http\Controllers\Admin\ChartController;
+
 
 /** Book shop routes **/
 Route::prefix('')->group(function(){
@@ -103,6 +105,22 @@ Route::prefix('/admin')->group(function(){
     Route::prefix('/orders')->group(function(){
         Route::get('' , [OrderController::class , 'index'])->name('admin.orders.index');
     });
+    // For Orders
+Route::prefix('admin/orders')->group(function () {
+    Route::get('', [OrderController::class, 'all'])->name('admin.orders.all');
+    Route::get('/create', [OrderController::class, 'create'])->name('admin.orders.create');
+    Route::post('', [OrderController::class, 'store'])->name('admin.orders.store');
+    Route::delete('/{order}/remove', [OrderController::class, 'destroy'])->name('admin.orders.destroy');
+    Route::get('/{order}/edit', [OrderController::class, 'edit'])->name('admin.orders.edit');
+    Route::put('/{order}/update', [OrderController::class, 'update'])->name('admin.orders.update');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('order-products', [OrderProductController::class, 'index'])->name('orderProduct.index');
+    Route::get('order-products/{order}/{product}/edit', [OrderProductController::class, 'edit'])->name('orderProduct.edit');
+    Route::delete('order-products/{order}/{product}', [OrderProductController::class, 'destroy'])->name('orderProduct.destroy');
+});
+
     /* For payments */
     Route::prefix('/payments')->group(function(){
         Route::get('' , [PaymentController::class , 'index'])->name('admin.payments.index');
