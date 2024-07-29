@@ -12,8 +12,16 @@
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js" integrity="sha512-RdSPYh1WA6BF0RhpisYJVYkOyTzK4HwofJ3Q7ivt/jkpW6Vc8AurL1R+4AUcvn9IwEKAPm/fk7qFZW3OuiUDeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
+<script src="{{ asset('js/login.js') }}"></script>
+<script src="{{ asset('js/register.js') }}"></script>
 <script src="{{ asset('js/expenses.js') }}"></script>
 <script src="{{ asset('js/suppliers.js') }}"></script>
 <script src="{{ asset('js/users.js') }}"></script>
-<!-- <script src="{{ asset('js/dashboard.js') }}"></script>
-<script src="{{ asset('js/shop.js') }}"></script> -->
+<script src="{{ asset('js/categories.js') }}"></script>
+<script src="{{ asset('js/products.js') }}"></script>
+<script src="{{ asset('js/orders.js') }}"></script>
+<script src="{{ asset('js/orderproducts.js') }}"></script>
+<script src="{{ asset('js/productstock.js') }}"></script>
+<script src="{{ asset('js/my-orders.js') }}"></script>
+<script src="{{ asset('js/shop.js') }}"></script>
+<script src="{{ asset('js/summary.js') }}"></script>
